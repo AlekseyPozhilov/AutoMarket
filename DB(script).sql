@@ -42,14 +42,14 @@ UPDATE users SET password = MD5(RANDOM()::text) FROM generate_series(1, 20);
 -----------------------------------------------------------------------------------------------------------------------
 CREATE TABLE cars
 (
-	id BIGSERIAL PRIMARY KEY,
-	brand VARCHAR(255),
-	model VARCHAR(255),
-	year_of_publishing VARCHAR(255),
-	country_of_origin VARCHAR(255),
-	horse_power VARCHAR(255),
-	color VARCHAR(255),
-	price VARCHAR(255)
+    id BIGSERIAL PRIMARY KEY,
+    brand VARCHAR(255),
+    model VARCHAR(255),
+    year_of_publishing INT,
+    country_of_origin VARCHAR(255),
+    horse_power INT,
+    color VARCHAR(255),
+    price DECIMAL(10, 2)
 );
 
 INSERT INTO cars (brand, model, year_of_publishing, country_of_origin, horse_power, color, price)
