@@ -26,7 +26,7 @@ public class CarEntity {
     private Integer yearOfPublishing;
     @Column(name = "country_of_origin")
     private String countryOfOrigin;
-    @Column(name = "horse_Power")
+    @Column(name = "horse_power")
     private Integer horsePower;
     @Column(name = "color")
     private String color;
