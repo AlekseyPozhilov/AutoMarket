@@ -7,15 +7,15 @@ import com.automarket.data.entity.UserEntity;
 import org.mapstruct.Mapper;
 import org.mapstruct.factory.Mappers;
 
-@Mapper
+@Mapper(componentModel = "spring")
 public interface MyMapper {
     MyMapper INSTANCE = Mappers.getMapper(MyMapper.class);
 
-    CarEntity toEntity(CarDto dto);
+    CarEntity toCarEntity(CarDto dto);
 
-    CarDto toDto(CarEntity entity);
+    CarDto toCarDto(CarEntity entity);
 
-    UserEntity toEntity(UserDto dto);
+    UserEntity toUserEntity(UserDto dto);
 
-    UserDto toDto(UserEntity entity);
+    UserDto toUserDto(UserEntity entity);
 }
